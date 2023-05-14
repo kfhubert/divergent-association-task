@@ -11,13 +11,13 @@ print(model.distance("cat", "dog")) # 0.1983
 print(model.distance("cat", "thimble")) # 0.8787
 
 # Compute the DAT score between 2 words (average cosine distance * 100)
-print(model.dat(["cat", "dog"], 2)) # 19.83
-print(model.dat(["cat", "thimble"], 2)) # 87.87
+print(model.dat(["cat", "dog"])) # 19.83
+print(model.dat(["cat", "thimble"])) # 87.87
 
 # Word examples (Figure 1 in paper)
-low = ["arm", "eyes", "feet", "hand", "head", "leg", "body"]
+low = ["arm", "eyes", "feet", "hand", "head", "leg", "body", "toe", "nail", "finger"]
 average = ["bag", "bee", "burger", "feast", "office", "shoes", "tree"]
-high = ["hippo", "jumper", "machinery", "prickle", "tickets", "tomato", "violin"]
+high = ["hippo", "jumper", "machinery", "prickle", "tickets", "tomato", "violin", "scaffold"]
 
 # Compute the DAT score (transformed average cosine distance of first 7 valid words)
 print(model.dat(low)) # 50

@@ -75,16 +75,16 @@ class Model:
                 uniques.append(valid)
 
         # Keep subset of words
-        if len(uniques) >= minimum:
-            subset = uniques[:minimum]
-        else:
-            return None # Not enough valid words
+        #if len(uniques) >= minimum:
+        #    subset = uniques[:minimum]
+        #else:
+        #    return None # Not enough valid words
 
         # Compute distances between each pair of words
         distances = []
-        for word1, word2 in itertools.combinations(subset, 2):
+        for word1, word2 in itertools.combinations(uniques, 2):
             dist = self.distance(word1, word2)
             distances.append(dist)
 
         # Compute the DAT score (average semantic distance multiplied by 100)
-        return (sum(distances) / len(distances)) * 100
+        return [(sum(distances) / len(distances)) * 100, len(uniques)]
