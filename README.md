@@ -2,7 +2,7 @@
 
 The DAT measures creativity in under 4 minutes. It involves thinking of 10
 unrelated words. Creative people choose words with greater semantic distances
-between them.
+between them. Scoring now with all 10 words!
 
 See our manuscript in *PNAS* titled
 [Naming unrelated words predicts creativity](https://www.pnas.org/content/118/25/e2022340118)
